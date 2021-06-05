@@ -3,10 +3,23 @@
 <form class="form mt-4" [formGroup]="novoUsuarioForm" (ngSubmit)="cadastrar()">
   <div class="form-group">
     <input type="text" class="form-control" placeholder="E-mail" formControlName="email" />
+    <app-mensagem
+      mensagem="E-mail obrigatório"
+      *ngIf="novoUsuarioForm.get('email')?.errors?.required
+      && novoUsuarioForm.get('email')?.touched"></app-mensagem>
+    <app-mensagem
+      mensagem="E-mail inválido"
+      *ngIf="novoUsuarioForm.get('email')?.errors?.email
+      && novoUsuarioForm.get('email')?.touched"
+    ></app-mensagem>
   </div>
 
   <div class="form-group">
     <input type="text" class="form-control" placeholder="Nome completo" formControlName="fullName" />
+    <app-mensagem
+      mensagem="Nome inválido"
+      *ngIf="novoUsuarioForm.get('fullName')?.errors?.required
+      && novoUsuarioForm.get('fullName')?.touched"></app-mensagem>
   </div>
 
   <div class="form-group">
