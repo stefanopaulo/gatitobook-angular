@@ -32,9 +32,9 @@
       </div>
 
       <div *ngIf="!percentualConcluido; else uploaddiv">
-        <button [disabled]="formularioAnimal.invalid" type="submit" class="btn btn-primary btn-block"></button>
+        <button [disabled]="formularioAnimal.invalid" type="submit" class="btn btn-primary btn-block">Enviar</button>
 
-        <a [routerLink]="['animais']" class="btn btn-secondary btn-block">Cancelar</a>
+        <a [routerLink]="['/animais']" class="btn btn-secondary btn-block">Cancelar</a>
       </div>
 
       <ng-template #uploaddiv>
