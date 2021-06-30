@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NovoAnimalComponent implements OnInit {
 
+  formularioAnimal !: FormGroup;
+  file !: File;
+  preview !: string;
+  percentialConcluido = 0;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upload() {}
+
+  gravaArquivo(arquivo: any) {
+
   }
 
 }

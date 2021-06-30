@@ -16,7 +16,7 @@ const routes: Routes = [
   {
     path: 'novo',
     component: NovoAnimalComponent
-  }
+  },
   {
     path: ':animalId',
     component: DetalheAnimalComponent
